@@ -1,7 +1,6 @@
 // Create user sign-in view
-function UserSignIn(t, a) {
+function UserSignIn(a) {
 	this.a = a;
-	this.t = t;
 
 	this.create = function() {
 
@@ -9,7 +8,7 @@ function UserSignIn(t, a) {
 		template = new EJS({url: 'jokr/templates/user-sign-in.ejs'}).render();
 
 		// Render template
-		$('body').html(template);
+		$(this.a).html(template);
 
 
 		// Listen for click events on login button

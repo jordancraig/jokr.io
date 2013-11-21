@@ -5,7 +5,11 @@ Jokr is a JavaScript library for easily creating user interface elements used in
 
 To create a simple user login form, you simply call the following method.
 
-`var loginForm = new UserSignIn('Login', 'action_user.js').create();`
+`var loginForm = new UserSignIn('Jokr.IO', 'action_user.js').create();`
 
 The first argument is the title applied to the top of the login form and the second is the file that will handle your POST request for user authentication.
+
+And, BOOM!
+
+![Login](http://i.imgur.com/yfwAXrJ.png)
 

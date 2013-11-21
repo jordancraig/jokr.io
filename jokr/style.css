@@ -1,290 +1,618 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
+/*
+@import url(http://fonts.googleapis.com/css?family=Lato:300,700|Raleway:100,400,700,200);
+*/
+@font-face {
+    font-family: 'icomoon';
+        src: url('../fonts/icomoon.eot');
+        src: url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+                url('../fonts/icomoon.woff') format('woff'),
+                url('../fonts/icomoon.ttf') format('truetype'),
+                url('../fonts/icomoon.svg#icomoon') format('svg');
+        font-weight: normal;
+        font-style: normal;
 }
+
+/* Windows Chrome ugly fix http://stackoverflow.com/questions/13674808/chrome-svg-font-rendering-breaks-layout/14345363#14345363 */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+        @    font-face {
+        font-family: 'icomoon';
+        src: url('../fonts/icomoon.svg#icomoon') format('svg');
+    };
+}
+
+.icon-team, .icon-blog, .icon-home, .icon-about, .icon-contact, .icon-menu {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.icon-team:before {
+    content: "\e600";
+}
+
+.icon-about:before {
+    content: "\e601";
+}
+
+.icon-blog:before {
+    content: "\e602";
+}
+
+.icon-home:before {
+    content: "\e603";
+}
+
+.icon-contact:before {
+    content: "\e604";
+}
+
+.icon-menu:before {
+    content: "\f0c9";
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: 15px;
+    padding: 0;
+    margin: -38;
+    vertical-align:baseline;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
 body {
-	background: #DCDDDF url(http://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);
-	color: #000;
-	font: 14px Arial;
-	margin: 0 auto;
-	padding: 0;
-	position: relative;
-}
-h1{ font-size:28px;}
-h2{ font-size:26px;}
-h3{ font-size:18px;}
-h4{ font-size:16px;}
-h5{ font-size:14px;}
-h6{ font-size:12px;}
-h1,h2,h3,h4,h5,h6{ color:#563D64;}
-small{ font-size:10px;}
-b, strong{ font-weight:bold;}
-a{ text-decoration: none; }
-a:hover{ text-decoration: underline; }
-.left { float:left; }
-.right { float:right; }
-.alignleft { float: left; margin-right: 15px; }
-.alignright { float: right; margin-left: 15px; }
-.clearfix:after,
-form:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
-.container { margin: 25px auto; position: relative; width: auto; }
-#content {
-	background: #f9f9f9;
-	background: -moz-linear-gradient(top,  rgba(248,248,248,1) 0%, rgba(249,249,249,1) 100%);
-	background: -webkit-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(249,249,249,1) 100%);
-	background: -o-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(249,249,249,1) 100%);
-	background: -ms-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(249,249,249,1) 100%);
-	background: linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(249,249,249,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#f9f9f9',GradientType=0 );
-	-webkit-box-shadow: 0 1px 0 #fff inset;
-	-moz-box-shadow: 0 1px 0 #fff inset;
-	-ms-box-shadow: 0 1px 0 #fff inset;
-	-o-box-shadow: 0 1px 0 #fff inset;
-	box-shadow: 0 1px 0 #fff inset;
-	border: 1px solid #c4c6ca;
-	margin: 0 auto;
-	padding: 25px 0 0;
-	position: relative;
-	text-align: center;
-	text-shadow: 0 1px 0 #fff;
-	width: 400px;
-}
-#content h1 {
-	color: #7E7E7E;
-	font: bold 25px Helvetica, Arial, sans-serif;
-	letter-spacing: -0.05em;
-	line-height: 20px;
-	margin: 10px 0 30px;
-}
-#content h1:before,
-#content h1:after {
-	content: "";
-	height: 1px;
-	position: absolute;
-	top: 10px;
-	width: 27%;
-}
-#content h1:after {
-	background: rgb(126,126,126);
-	background: -moz-linear-gradient(left,  rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
-	background: -webkit-linear-gradient(left,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
-	background: -o-linear-gradient(left,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
-	background: -ms-linear-gradient(left,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
-	background: linear-gradient(left,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
-    right: 0;
-}
-#content h1:before {
-	background: rgb(126,126,126);
-	background: -moz-linear-gradient(right,  rgba(126,126,126,1) 0%, rgba(255,255,255,1) 100%);
-	background: -webkit-linear-gradient(right,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
-	background: -o-linear-gradient(right,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
-	background: -ms-linear-gradient(right,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
-	background: linear-gradient(right,  rgba(126,126,126,1) 0%,rgba(255,255,255,1) 100%);
-    left: 0;
-}
-#content:after,
-#content:before {
-	background: #f9f9f9;
-	background: -moz-linear-gradient(top,  rgba(248,248,248,1) 0%, rgba(249,249,249,1) 100%);
-	background: -webkit-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(249,249,249,1) 100%);
-	background: -o-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(249,249,249,1) 100%);
-	background: -ms-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(249,249,249,1) 100%);
-	background: linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(249,249,249,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#f9f9f9',GradientType=0 );
-	border: 1px solid #c4c6ca;
-	content: "";
-	display: block;
-	height: 100%;
-	left: -1px;
-	position: absolute;
-	width: 100%;
-}
-#content:after {
-	-webkit-transform: rotate(2deg);
-	-moz-transform: rotate(2deg);
-	-ms-transform: rotate(2deg);
-	-o-transform: rotate(2deg);
-	transform: rotate(2deg);
-	top: 0;
-	z-index: -1;
-}
-#content:before {
-	-webkit-transform: rotate(-3deg);
-	-moz-transform: rotate(-3deg);
-	-ms-transform: rotate(-3deg);
-	-o-transform: rotate(-3deg);
-	transform: rotate(-3deg);
-	top: 0;
-	z-index: -2;
-}
-#content form { margin: 0 20px; position: relative }
-#content form input[type="text"],
-#content form input[type="password"] {
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
-	border-radius: 3px;
-	-webkit-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0,0,0,0.08) inset;
-	-moz-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0,0,0,0.08) inset;
-	-ms-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0,0,0,0.08) inset;
-	-o-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0,0,0,0.08) inset;
-	box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0,0,0,0.08) inset;
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-ms-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-	background: #eae7e7 url(http://cssdeck.com/uploads/media/items/8/8bcLQqF.png) no-repeat;
-	border: 1px solid #c8c8c8;
-	color: #777;
-	font: 13px Helvetica, Arial, sans-serif;
-	margin: 0 0 10px;
-	padding: 15px 10px 15px 40px;
-	width: 80%;
-}
-#content form input[type="text"]:focus,
-#content form input[type="password"]:focus {
-	-webkit-box-shadow: 0 0 2px #ed1c24 inset;
-	-moz-box-shadow: 0 0 2px #ed1c24 inset;
-	-ms-box-shadow: 0 0 2px #ed1c24 inset;
-	-o-box-shadow: 0 0 2px #ed1c24 inset;
-	box-shadow: 0 0 2px #ed1c24 inset;
-	background-color: #fff;
-	border: 1px solid #ed1c24;
-	outline: none;
-}
-#username { background-position: 10px 10px !important }
-#password { background-position: 10px -53px !important }
-#content form input[type="button"] {
-	background: rgb(254,231,154);
-	background: -moz-linear-gradient(top,  rgba(254,231,154,1) 0%, rgba(254,193,81,1) 100%);
-	background: -webkit-linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);
-	background: -o-linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);
-	background: -ms-linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);
-	background: linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fee79a', endColorstr='#fec151',GradientType=0 );
-	-webkit-border-radius: 30px;
-	-moz-border-radius: 30px;
-	-ms-border-radius: 30px;
-	-o-border-radius: 30px;
-	border-radius: 30px;
-	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
-	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
-	-ms-box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
-	-o-box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
-	box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
-	border: 1px solid #D69E31;
-	color: #85592e;
-	cursor: pointer;
-	float: left;
-	font: bold 15px Helvetica, Arial, sans-serif;
-	height: 35px;
-	margin: 20px 0 35px 15px;
-	position: relative;
-	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
-	width: 120px;
-}
-#content form input[type="button"]:hover {
-	background: rgb(254,193,81);
-	background: -moz-linear-gradient(top,  rgba(254,193,81,1) 0%, rgba(254,231,154,1) 100%);
-	background: -webkit-linear-gradient(top,  rgba(254,193,81,1) 0%,rgba(254,231,154,1) 100%);
-	background: -o-linear-gradient(top,  rgba(254,193,81,1) 0%,rgba(254,231,154,1) 100%);
-	background: -ms-linear-gradient(top,  rgba(254,193,81,1) 0%,rgba(254,231,154,1) 100%);
-	background: linear-gradient(top,  rgba(254,193,81,1) 0%,rgba(254,231,154,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fec151', endColorstr='#fee79a',GradientType=0 );
-}
-#content form div a {
-	color: #004a80;
-    float: right;
-    font-size: 12px;
-    margin: 30px 15px 0 0;
-    text-decoration: underline;
-}
-.button {
-	background: rgb(247,249,250);
-	background: -moz-linear-gradient(top,  rgba(247,249,250,1) 0%, rgba(240,240,240,1) 100%);
-	background: -webkit-linear-gradient(top,  rgba(247,249,250,1) 0%,rgba(240,240,240,1) 100%);
-	background: -o-linear-gradient(top,  rgba(247,249,250,1) 0%,rgba(240,240,240,1) 100%);
-	background: -ms-linear-gradient(top,  rgba(247,249,250,1) 0%,rgba(240,240,240,1) 100%);
-	background: linear-gradient(top,  rgba(247,249,250,1) 0%,rgba(240,240,240,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f9fa', endColorstr='#f0f0f0',GradientType=0 );
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
-	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
-	-ms-box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
-	-o-box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
-	-webkit-border-radius: 0 0 5px 5px;
-	-moz-border-radius: 0 0 5px 5px;
-	-o-border-radius: 0 0 5px 5px;
-	-ms-border-radius: 0 0 5px 5px;
-	border-radius: 0 0 5px 5px;
-	border-top: 1px solid #CFD5D9;
-	padding: 15px 0;
-}
-.button a {
-	background: url(http://cssdeck.com/uploads/media/items/8/8bcLQqF.png) 0 -112px no-repeat;
-	color: #7E7E7E;
-	font-size: 17px;
-	padding: 2px 0 2px 40px;
-	text-decoration: none;
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	-ms-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-}
-.button a:hover {
-	background-position: 0 -135px;
-	color: #00aeef;
+    font-family: 'Raleway', Calibri, Arial, sans-serif;
+    color: #89867e;
+    background: #f9f9f9;
 }
 
+a {
+    color: #333;
+    text-decoration: none;
+}
 
+a:hover {
+    color: #fff;
+}
+
+.main,
 .container > header {
-	font-family: 'Lato', Arial, sans-serif;
-	color: #34495e;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main {
+    max-width: 82.667em;
+    /* min-height: 40em; */
+}
+
+.container > header img {
+    width: 642px;
+    margin: 25px;
+    margin-left: 200px;   
 }
 
 .container > header {
-	margin: 0 auto;
-	padding: 2em;
-	text-align: center;
-	background: #34495e;
-	color: #fff;
+    text-align: center;
+    font-size: 16px;
+    padding: 4em 2em 3em;
+    background: rgba(0,0,0,0.01);
 }
 
 .container > header h1 {
-	font-size: 2.625em;
-	line-height: 1.3;
-	margin: 0;
-	font-weight: 300;
+    font-size: 2.625em;
+    line-height: 1.3;
+    margin: 0;
+    font-weight: 300;
 }
 
 .container > header span {
-	display: block;
-	font-size: 60%;
-	color: #16a085;
-	padding: 0 0 0.6em 0.1em;
+    display: auto;
+    font-size: 60%;
+    color: #ceccc6;
+    padding: 0 0 0.6em 0.1em;
+}
+
+a, li {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+.nav ul {
+    max-width: 1240px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.nav li span {
+    display: block;
+}
+
+.nav a {
+    display: block;
+    color: rgba(249, 249, 249, .9);
+    text-decoration: none;
+    -webkit-transition: color .5s, background .5s, height .5s;
+    -moz-transition: color .5s, background .5s, height .5s;
+    -o-transition: color .5s, background .5s, height .5s;
+    -ms-transition: color .5s, background .5s, height .5s;
+    transition: color .5s, background .5s, height .5s;
+}
+
+.nav i {
+        /* Make the font smoother for Chrome */
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+/* Remove the blue Webkit background when element is tapped */
+
+a, button {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* Hover effect for the whole navigation to make the hovered item stand out */
+
+.no-touch .nav ul:hover a {
+    color: rgba(249, 249, 249, .5);
+}
+
+.no-touch .nav ul:hover a:hover {
+    color: rgba(249, 249, 249, 0.99);
+}
+
+/* Adding some background color to the different menu items */
+
+.nav li:nth-child(6n+1) {
+    background: rgb(208, 101, 3);
+}
+
+.nav li:nth-child(6n+2) {
+    background: rgb(233, 147, 26);
+}
+
+.nav li:nth-child(6n+3) {
+    background: rgb(22, 145, 190);
+}
+
+.nav li:nth-child(6n+4) {
+    background: rgb(22, 107, 162);
+}
+
+.nav li:nth-child(6n+5) {
+    background: rgb(27, 54, 71);
+}
+
+.nav li:nth-child(6n+6) {
+    background: rgb(21, 40, 54);
+}
+
+/* For screen bigger than 800px */
+@media (min-width: 50em) {
+
+        /* Transforms the list into a horizontal navigation */
+    .nav li {
+        float: left;
+        width: 20%;
+        text-align: center;
+        -webkit-transition: border .5s;
+        -moz-transition: border .5s;
+        -o-transition: border .5s;
+        -ms-transition: border .5s;
+        transition: border .5s;
+    }
+
+    .nav a {
+        display: block;
+        width: auto;
+    }
+
+        /* hover, focused and active effects that add a little colored border to the different items */
+    .no-touch .nav li:nth-child(6n+1) a:hover,
+        .no-touch .nav li:nth-child(6n+1) a:active,
+        .no-touch .nav li:nth-child(6n+1) a:focus {
+        border-bottom: 4px solid rgb(174, 78, 1);
+    }
+
+    .no-touch .nav li:nth-child(6n+2) a:hover,
+        .no-touch .nav li:nth-child(6n+2) a:active,
+        .no-touch .nav li:nth-child(6n+2) a:focus {
+        border-bottom: 4px solid rgb(191, 117, 20);
+    }
+
+    .no-touch .nav li:nth-child(6n+3) a:hover,
+        .no-touch .nav li:nth-child(6n+3) a:active,
+        .no-touch .nav li:nth-child(6n+3) a:focus {
+        border-bottom: 4px solid rgb(12, 110, 149);
+    }
+
+    .no-touch .nav li:nth-child(6n+4) a:hover,
+        .no-touch .nav li:nth-child(6n+4) a:active,
+        .no-touch .nav li:nth-child(6n+4) a:focus {
+        border-bottom: 4px solid rgb(10, 75, 117);
+    }
+
+    .no-touch .nav li:nth-child(6n+5) a:hover,
+        .no-touch .nav li:nth-child(6n+5) a:active,
+        .no-touch .nav li:nth-child(6n+5) a:focus {
+        border-bottom: 4px solid rgb(16, 34, 44);
+    }
+
+    .no-touch .nav li:nth-child(6n+6) a:hover,
+        .no-touch .nav li:nth-child(6n+6) a:active,
+        .no-touch .nav li:nth-child(6n+6) a:focus {
+        border-bottom: 4px solid rgb(9, 18, 25);
+    }
+
+        /* Placing the icon */
+        
+    .icon {
+        padding-top: 1.4em;
+    }
+
+    .icon + span {
+        margin-top: 2.1em;
+        -webkit-transition: margin .5s;
+        -moz-transition: margin .5s;
+        -o-transition: margin .5s;
+        -ms-transition: margin .5s;
+        transition: margin .5s;
+    }
+
+        /* Animating the height of the element*/
+    .nav a {
+        height: 9em;
+    }
+
+    .no-touch .nav a:hover ,
+        .nav a:active ,
+        .nav a:focus {
+        height: 10em;
+    }        
+
+        /* Making the text follow the height animation */
+    .no-touch .nav a:hover .icon + span {
+        margin-top: 3.2em;
+        -webkit-transition: margin .5s;
+        -moz-transition: margin .5s;
+        -o-transition: margin .5s;
+        -ms-transition: margin .5s;
+        transition: margin .5s;
+    }
+
+        /* Positioning the icons and preparing for the animation*/
+    .nav i {
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0.4em;
+        border-radius: 50%;
+        font-size: 1.8em;
+        box-shadow: 0 0 0 30px transparent;
+        background: rgba(255,255,255,0.1);
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transition: box-shadow .6s ease-in-out;
+        -moz-transition: box-shadow .6s ease-in-out;
+        -o-transition: box-shadow .6s ease-in-out;
+        -ms-transition: box-shadow .6s ease-in-out;
+        transition: box-shadow .6s ease-in-out;
+    }        
+        
+        /* Animate the box-shadow to create the effect */
+    .no-touch .nav a:hover i,
+        .no-touch .nav a:active i,
+        .no-touch .nav a:focus i {
+        box-shadow: 0 0 0 0 rgba(255,255,255,0.2);
+        -webkit-transition: box-shadow .4s ease-in-out;
+        -moz-transition: box-shadow .4s ease-in-out;
+        -o-transition: box-shadow .4s ease-in-out;
+        -ms-transition: box-shadow .4s ease-in-out;
+        transition: box-shadow .4s ease-in-out;
+    }
+}
+
+@media (min-width: 50em) and (max-width: 61.250em) {
+
+        /* Size and font adjustments to make it fit into the screen*/
+    .nav ul {
+        font-size: 1.2em;
+    }
+}
+
+/* The "tablet" and "mobile" version */
+
+@media (max-width: 49.938em) {
+                
+        
+        /* Instead of adding a border, we transition the background color */
+    .no-touch .nav ul li:nth-child(6n+1) a:hover,
+        .no-touch .nav ul li:nth-child(6n+1) a:active,
+        .no-touch .nav ul li:nth-child(6n+1) a:focus {
+        background: rgb(227, 119, 20);
+    }
+
+    .no-touch .nav li:nth-child(6n+2) a:hover,
+        .no-touch .nav li:nth-child(6n+2) a:active,
+        .no-touch .nav li:nth-child(6n+2) a:focus {
+        background: rgb(245, 160, 41);
+    }
+
+    .no-touch .nav li:nth-child(6n+3) a:hover,
+        .no-touch .nav li:nth-child(6n+3) a:active,
+        .no-touch .nav li:nth-child(6n+3) a:focus {
+        background: rgb(44, 168, 219);
+    }
+
+    .no-touch .nav li:nth-child(6n+4) a:hover,
+        .no-touch .nav li:nth-child(6n+4) a:active,
+        .no-touch .nav li:nth-child(6n+4) a:focus {
+        background: rgb(31, 120, 176);
+    }
+
+    .no-touch .nav li:nth-child(6n+5) a:hover,
+        .no-touch .nav li:nth-child(6n+5) a:active,
+        .no-touch .nav li:nth-child(6n+5) a:focus {
+        background: rgb(39, 70, 90);
+    }
+
+    .no-touch .nav li:nth-child(6n+6) a:hover,
+        .no-touch .nav li:nth-child(6n+6) a:active,
+        .no-touch .nav li:nth-child(6n+6) a:focus {
+        background: rgb(32, 54, 68);
+    }
+
+    .nav ul li {
+        -webkit-transition: background 0.5s;
+        -moz-transition: background 0.5s;
+        -o-transition: background 0.5s;
+        -ms-transition: background 0.5s;
+        transition: background 0.5s;
+    }
+}
+
+/* CSS specific to the 2x3 columns version */
+@media (min-width:32.5em) and (max-width: 49.938em) {
+        
+        /* Creating the 2 column layout using floating elements once again */
+    .nav li {
+        display: block;
+        float: left;
+        width: 50%;
+    }
+        
+        /* Adding some padding to make the elements look nicer*/
+    .nav a {
+        padding: 0.8em;
+    }
+
+        /* Displaying the icons on the left, and the text on the right side using inlin-block*/
+    .nav li span, 
+        .nav li span.icon {
+        display: inline-block;
+    }
+
+    .nav li span.icon {
+        width: 50%;
+    }
+
+    .nav li .icon + span {
+        font-size: 1em;
+    }
+
+    .icon + span {
+        position: relative;
+        top: -0.2em;
+    }
+
+        /* Adaptating to the icons to animate the size and border of the rounded background in a more discreet way */
+    .nav li i {
+        display: inline-block;
+        padding: 8% 9%;
+        border: 4px solid transparent;
+        border-radius: 50%;
+        font-size: 1.5em;
+        background: rgba(255,255,255,0.1);
+        -webkit-transition: border .5s;
+        -moz-transition: border .5s;
+        -o-transition: border .5s;
+        -ms-transition: border .5s;
+        transition: border .5s;
+    }
+
+        /* Transition effect on the border color */
+    .no-touch .nav li:hover i,
+        .no-touch .nav li:active i,
+        .no-touch .nav li:focus i {
+        border: 4px solid rgba(255,255,255,0.1);
+    }
+}
+
+/* Adapting the font size and width for smaller screns*/
+@media (min-width: 32.5em) and (max-width: 38.688em) {
+        
+    .nav li span.icon {
+        width: 50%;
+    }
+
+    .nav li .icon + span {
+        font-size: 0.9em;
+    }
+}
+
+/* Styling the toggle menu link and hiding it */
+.nav .navtoogle {
+    display: none;
+    width: 100%;
+    padding: 0.5em 0.5em 0.8em;
+    font-family: 'Raleway',Calibri,Arial,sans-serif;
+    font-weight: normal;
+    text-align: left;
+    color: rgb(7, 16, 15);
+    font-size: 1.2em;
+    background: none;
+    border: none;
+    border-bottom: 4px solid rgb(221, 221, 221);
+    cursor: pointer;
+}
+
+.navtoogle i {
+    z-index: -1;
+}
+
+.icon-menu {
+    position: relative;
+    top: 3px;
+    line-height: 0;
+    font-size: 1.6em;
+}
+
+@media (max-width: 32.438em) {
+
+        /* Unhiding the styled menu link */
+    .nav .navtoogle {
+        margin: 0;
+        display: block;
+    }
+        
+        /* Animating the height of the navigation when the button is clicked */
+        
+        /* When JavaScript is disabled, we hide the menu */
+    .no-js .nav ul {
+        max-height: 30em;
+        overflow: hidden;
+    }
+        
+        /* When JavaScript is enabled, we hide the menu */
+    .js .nav ul {
+        max-height: 0em;
+        overflow: hidden;
+    }
+        
+        /* Displaying the menu when the user has clicked on the button*/
+    .js .nav .active + ul {
+        max-height: 30em;
+        overflow: hidden;
+        -webkit-transition: max-height .4s;
+        -moz-transition: max-height .4s;
+        -o-transition: max-height .4s;
+        -ms-transition: max-height .4s;
+        transition: max-height .4s;
+    }
+
+        /* Adapting the layout of the menu for smaller screens : icon on the left and text on the right*/
+        
+    .nav li span {
+        display: inline-block;
+        height: 100%;
+    }
+
+    .nav a {
+        padding: 0.5em;
+    }
+
+    .icon + span {
+        margin-left: 1em;
+        font-size: 0.8em;
+    }
+        
+        /* Adding a left border of 8 px with a different color for each menu item*/
+    .nav li:nth-child(6n+1) {
+        border-left: 8px solid rgb(174, 78, 1);
+    }
+
+    .nav li:nth-child(6n+2) {
+        border-left: 8px solid rgb(191, 117, 20);
+    }
+
+    .nav li:nth-child(6n+3) {
+        border-left: 8px solid rgb(13, 111, 150);
+    }
+
+    .nav li:nth-child(6n+4) {
+        border-left: 8px solid rgb(10, 75, 117);
+    }
+
+    .nav li:nth-child(6n+5) {
+        border-left: 8px solid rgb(16, 34, 44);
+    }
+
+    .nav li:nth-child(6n+6) {
+        border-left: 8px solid rgb(9, 18, 25);
+    }
+
+        /* make the nav bigger on touch screens */
+    .touch .nav a {
+        padding: 0.8em;
+    }
+}
+
+@media screen and (max-width: 25em) {
+    
+    .container > header {
+        font-size: 75%;
+    }
+}
+
+.content h1 {
+    text-align: center;
+    height: 100%;
+    padding-bottom: 2px;
+}
+
+/* secondary navigation stuff */
+
+.lgna {
+    margin-right: 30px;
+}
+
+.hlpc {
+    margin-left: 30px;
+}
+
+.nav-two {
+    text-align: center;
+}
+
+.nav-two a {
+    font-family: 'Raleway', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 15px;
+}
+
+.indexly {
+    padding-top: 25px;
+}
+
+.indexly a {
+    color: #000;
 }

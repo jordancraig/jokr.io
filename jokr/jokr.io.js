@@ -114,6 +114,46 @@ function UserProfile(a) {
 	}
 }
 
+function MinimalOnePage(a) {
+	this.a = a;
+
+	this.create = function() {
+
+		var mncss = 'jokr/libs/minimal/css/main.css';
+		var fntcss = 'jokr/libs/minimal/css/font-awesome.min.css';
+		var osw = 'http://fonts.googleapis.com/css?family=Oswald:400,300,700';
+		var carm = 'http://fonts.googleapis.com/css?family=EB+Garamond';
+
+		var mnjs = '/jokr/libs/minimal/js/main.js';
+		var clsjs = '/jokr/libs/minimal/js/classie.js';
+		var smthjs = '/jokr/libs/minimal/js/smoothscroll.js';
+
+		var depends_css = [mncss,fntcss,osw,carm];
+		var depends_js = [mnjs,clsjs,smthjs];
+
+		// Inject Minimal dependencies
+		for(var i = 0; i < depends_css.length; i++) {
+			var cssinject = document.createElement("link");
+			cssinject.href = depends_css[i];
+			cssinject.rel = "stylesheet";
+			document.getElementsByTagName("head")[0].appendChild(cssinject);
+		}
+
+		for(var i = 0; i < depends_js.length; i++) {
+			var jsinject = document.createElement("script");
+			jsinject.src = depends_js[i];
+			jsinject.type = "text/javascript";
+			document.getElementsByTagName("head")[0].appendChild(jsinject);
+		}
+
+		//Create EJS reference
+		template = new EJS({url: 'jokr/templates/minimal-one-page.ejs'}).render();
+
+		// Render template 
+		$(this.a).html(template);
+	}
+}
+
 // Create custom alert
 function Alert(opts) {
 	alert(opts);

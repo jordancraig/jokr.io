@@ -300,6 +300,10 @@ a:after {
 			transition: all .1s ease-in-out;
 }
 
+#menuToggle i {
+	line-height: 40px;
+}
+
 #menuToggle:hover {
 	color: #ffffff;
 	background: rgba(0,0,0,0.2);

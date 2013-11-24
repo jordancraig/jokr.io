@@ -1,9 +1,9 @@
 function Jokr() {
 
 	// Inject dependency scripts
-	var jquerycol = '/jokr/libs/jquery.color.min.js';
-	var modern = '/jokr/libs/modernizr.custom.js';
-	var ejs = '/jokr/libs/ejs_production.js';
+	var jquerycol = 'http://jordancraig.github.io/jokr.io//jokr/libs/jquery.color.min.js';
+	var modern = 'http://jordancraig.github.io/jokr.io//jokr/libs/modernizr.custom.js';
+	var ejs = 'http://jordancraig.github.io/jokr.io//jokr/libs/ejs_production.js';
 
 	var dependencies = [jquerycol,modern];
 
@@ -22,12 +22,12 @@ function Jokr() {
 	// Inject chosen framework CSS.
 	this.play = function(sw) {
 
-		this.f = '/jokr/libs/foundation/css/foundation.min.css';
-		this.fn = '/jokr/libs/foundation/css/normalize.css';
-		this.fjs = '/jokr/libs/foundation/js/foundation.js'
+		this.f = 'http://jordancraig.github.io/jokr.io//jokr/libs/foundation/css/foundation.min.css';
+		this.fn = 'http://jordancraig.github.io/jokr.io//jokr/libs/foundation/css/normalize.css';
+		this.fjs = 'http://jordancraig.github.io/jokr.io//jokr/libs/foundation/js/foundation.js'
 
-		this.b = '/jokr/libs/bootstrap/css/bootstrap.css';
-		this.bootjs = '/jokr/libs/bootstrap/js/bootstrap.js'
+		this.b = 'http://jordancraig.github.io/jokr.io//jokr/libs/bootstrap/css/bootstrap.css';
+		this.bootjs = 'http://jordancraig.github.io/jokr.io//jokr/libs/bootstrap/js/bootstrap.js'
 
 
 		if(sw == 'foundation') {
@@ -70,7 +70,7 @@ function GmailSignIn(a) {
 	this.create = function() {
 
 		// Create EJS reference
-		template = new EJS({url: 'jokr/templates/gmail-sign-in.ejs'}).render();
+		template = new EJS({url: 'http://jordancraig.github.io/jokr.io/jokr/templates/gmail-sign-in.ejs'}).render();
 
 		// Render template
 		$(this.a).html(template);
@@ -107,7 +107,7 @@ function UserProfile(a) {
 	this.create = function() {
 
 		// Create EJS reference
-		template = new EJS({url: 'jokr/templates/user-profile.ejs'}).render();
+		template = new EJS({url: 'http://jordancraig.github.io/jokr.io/jokr/templates/user-profile.ejs'}).render();
 
 		// Render template
 		$(this.a).html(template);
@@ -119,14 +119,14 @@ function MinimalOnePage(a) {
 
 	this.create = function() {
 
-		var mncss = 'jokr/libs/minimal/css/main.css';
-		var fntcss = 'jokr/libs/minimal/css/font-awesome.min.css';
+		var mncss = 'http://jordancraig.github.io/jokr.io/jokr/libs/minimal/css/main.css';
+		var fntcss = 'http://jordancraig.github.io/jokr.io/jokr/libs/minimal/css/font-awesome.min.css';
 		var osw = 'http://fonts.googleapis.com/css?family=Oswald:400,300,700';
 		var carm = 'http://fonts.googleapis.com/css?family=EB+Garamond';
 
-		var mnjs = '/jokr/libs/minimal/js/main.js';
-		var clsjs = '/jokr/libs/minimal/js/classie.js';
-		var smthjs = '/jokr/libs/minimal/js/smoothscroll.js';
+		var mnjs = 'http://jordancraig.github.io/jokr.io/jokr/libs/minimal/js/main.js';
+		var clsjs = 'http://jordancraig.github.io/jokr.io/jokr/libs/minimal/js/classie.js';
+		var smthjs = 'http://jordancraig.github.io/jokr.io/jokr/libs/minimal/js/smoothscroll.js';
 
 		var depends_css = [mncss,fntcss,osw,carm];
 		var depends_js = [mnjs,clsjs,smthjs];
@@ -147,7 +147,7 @@ function MinimalOnePage(a) {
 		}
 
 		//Create EJS reference
-		template = new EJS({url: 'jokr/templates/minimal-one-page.ejs'}).render();
+		template = new EJS({url: 'http://jordancraig.github.io/jokr.io/jokr/templates/minimal-one-page.ejs'}).render();
 
 		// Render template 
 		$(this.a).html(template);

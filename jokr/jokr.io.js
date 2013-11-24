@@ -14,10 +14,7 @@ function Jokr() {
 		document.getElementsByTagName("head")[0].appendChild(js);
 	}
 
-	var js = document.createElement("script");
-	js.src = ejs;
-	js.type = 'text/javascript';
-	$("head").prepend(js);
+
 
 	// Inject chosen framework CSS.
 	this.play = function(sw) {

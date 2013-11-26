@@ -5,13 +5,19 @@ Jokr is a JavaScript library for easily creating user interface elements used in
 
 Jokr allows for easy switching between front-end libraries like Bootstrap and Foundation.
 
-It's easy to use either;
+# How to use
+
+First create a new instance of jokr with the specified framework:
+
 `var jokr = new Jokr().play('bootstrap');`
 
+## Creating pages
 
 To create a simple user login form, you simply call the following method.
 
 `var loginForm = new GmailSignIn('body').create();`
+
+# Misc
 
 Check it out and contribute!
 

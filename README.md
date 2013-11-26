@@ -9,13 +9,17 @@ Jokr allows for easy switching between front-end libraries like Bootstrap and Fo
 
 First create a new instance of jokr with the specified framework:
 
-`var jokr = new Jokr().play('bootstrap');`
+```
+var jokr = new Jokr().play('bootstrap');
+```
 
 ## Creating pages
 
 To create a simple user login form, you simply call the following method.
 
-`var loginForm = new GmailSignIn('body').create();`
+```
+var loginForm = new GmailSignIn('body').create();
+```
 
 # Misc
 

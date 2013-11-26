@@ -1,7 +1,7 @@
 <html lang="en">
 
 <head>
-<title>Jokr.IO</title>
+<title></title>
 <script type='text/javascript' src='jokr/libs/jquery.min.js'></script>
 <script type='text/javascript' src='jokr/jokr.io.js'></script>
 </head>
@@ -14,7 +14,9 @@
 <script>
 	var jokr = new Jokr().play('bootstrap');
 
-	var user_form = new MinimalOnePage('body').create();
+	var user_form = new MinimalOnePage('body').create({
+		title: 'JOKR.IO',	
+	});
 </script>
 
 </html>

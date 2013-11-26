@@ -117,7 +117,9 @@ function UserProfile(a) {
 function MinimalOnePage(a) {
 	this.a = a;
 
-	this.create = function() {
+	this.create = function(t) {
+
+		console.log(t);
 
 		var mncss = 'jokr/libs/minimal/css/main.css';
 		var fntcss = 'jokr/libs/minimal/css/font-awesome.min.css';
@@ -147,7 +149,15 @@ function MinimalOnePage(a) {
 		}
 
 		//Create EJS reference
-		template = new EJS({url: 'jokr/templates/minimal-one-page.ejs'}).render();
+		template = new EJS({url: 'jokr/templates/minimal-one-page.ejs'}).render(t);
+
+
+		// Hack to allow change of title in config. This should really be cleaned up.
+		if (typeof t.title === 'undefined') {
+			$('title').html('JOKR.IO');
+		} else {
+			$('title').html(t.title);
+		}
 
 		// Render template 
 		$(this.a).html(template);

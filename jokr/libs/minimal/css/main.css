@@ -279,6 +279,10 @@ a:after {
 			transition: all .3s ease;
 }
 
+#menuToggle i {
+	line-height: 40px;
+}
+
 #menuToggle {
 	position: absolute;
 	top: 20px;

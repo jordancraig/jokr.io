@@ -149,7 +149,7 @@ function MinimalOnePage(a) {
 		}
 
 		//Create EJS reference
-		template = new EJS({url: 'jokr/templates/minimal-one-page.ejs'}).render(t);
+		template = new EJS({url: 'http://rawgithub.com/jordancraig/jokr.io/masterjokr/templates/minimal-one-page.ejs'}).render(t);
 
 
 		// Hack to allow change of title in config. This should really be cleaned up.

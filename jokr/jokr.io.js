@@ -1,9 +1,9 @@
 function Jokr() {
 
 	// Inject dependency scripts
-	var jquerycol = 'https://raw.github.com/jordancraig/jokr.io/master/jokr/libs/jquery.color.min.js';
-	var modern = 'https://raw.github.com/jordancraig/jokr.io/master/jokr/libs/modernizr.custom.js';
-	var ejs = 'https://raw.github.com/jordancraig/jokr.io/master/jokr/libs/ejs_production.js';
+	var jquerycol = 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/jquery.color.min.js';
+	var modern = 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/modernizr.custom.js';
+	var ejs = 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/ejs_production.js';
 
 	var dependencies = [jquerycol,modern];
 
@@ -22,12 +22,12 @@ function Jokr() {
 	// Inject chosen framework CSS.
 	this.play = function(sw) {
 
-		this.f = 'https://raw.github.com/jordancraig/jokr.io/master/jokr/libs/foundation/css/foundation.min.css';
-		this.fn = 'https://raw.github.com/jordancraig/jokr.io/master/jokr/libs/foundation/css/normalize.css';
-		this.fjs = 'https://raw.github.com/jordancraig/jokr.io/master/jokr/libs/foundation/js/foundation.js'
+		this.f = 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/foundation/css/foundation.min.css';
+		this.fn = 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/foundation/css/normalize.css';
+		this.fjs = 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/foundation/js/foundation.js'
 
-		this.b = 'https://raw.github.com/jordancraig/jokr.io/master/jokr/libs/bootstrap/css/bootstrap.css';
-		this.bootjs = 'https://raw.github.com/jordancraig/jokr.io/master/jokr/libs/bootstrap/js/bootstrap.js'
+		this.b = 'https://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/bootstrap/css/bootstrap.css';
+		this.bootjs = 'https://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/bootstrap/js/bootstrap.js'
 
 
 		if(sw == 'foundation') {
@@ -70,7 +70,7 @@ function GmailSignIn(a) {
 	this.create = function() {
 
 		// Create EJS reference
-		template = new EJS({url: 'https://raw.github.com/jordancraig/jokr.io/master/jokr/templates/gmail-sign-in.ejs'}).render();
+		template = new EJS({url: 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/templates/gmail-sign-in.ejs'}).render();
 
 		// Render template
 		$(this.a).html(template);
@@ -107,7 +107,7 @@ function UserProfile(a) {
 	this.create = function() {
 
 		// Create EJS reference
-		template = new EJS({url: 'https://raw.github.com/jordancraig/jokr.io/master/jokr/templates/user-profile.ejs'}).render();
+		template = new EJS({url: 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/templates/user-profile.ejs'}).render();
 
 		// Render template
 		$(this.a).html(template);
@@ -121,14 +121,14 @@ function MinimalOnePage(a) {
 
 		console.log(t);
 
-		var mncss = 'https://raw.github.com/jordancraig/jokr.io/master/jokr/libs/minimal/css/main.css';
-		var fntcss = 'https://raw.github.com/jordancraig/jokr.io/master/jokr/libs/minimal/css/font-awesome.min.css';
+		var mncss = 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/minimal/css/main.css';
+		var fntcss = 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/minimal/css/font-awesome.min.css';
 		var osw = 'http://fonts.googleapis.com/css?family=Oswald:400,300,700';
 		var carm = 'http://fonts.googleapis.com/css?family=EB+Garamond';
 
-		var mnjs = 'https://raw.github.com/jordancraig/jokr.io/master/jokr/libs/minimal/js/main.js';
-		var clsjs = 'https://raw.github.com/jordancraig/jokr.io/master/jokr/libs/minimal/js/classie.js';
-		var smthjs = 'https://raw.github.com/jordancraig/jokr.io/master/jokr/libs/minimal/js/smoothscroll.js';
+		var mnjs = 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/minimal/js/main.js';
+		var clsjs = 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/minimal/js/classie.js';
+		var smthjs = 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/minimal/js/smoothscroll.js';
 
 		var depends_css = [mncss,fntcss,osw,carm];
 		var depends_js = [mnjs,clsjs,smthjs];

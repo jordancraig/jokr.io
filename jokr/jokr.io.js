@@ -1,11 +1,12 @@
 function Jokr() {
 
 	// Inject dependency scripts
+	var jquery = 'http://codeorigin.jquery.com/jquery-2.0.3.min.js'
 	var jquerycol = 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/jquery.color.min.js';
 	var modern = 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/modernizr.custom.js';
 	var ejs = 'http://rawgithub.com/jordancraig/jokr.io/master/jokr/libs/ejs_production.js';
 
-	var dependencies = [jquerycol,modern];
+	var dependencies = [jquery,jquerycol,modern];
 
 	for (var i = 0; i < dependencies.length; i++) {
 		var js = document.createElement("script");
